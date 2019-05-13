@@ -31,6 +31,14 @@ app.get('/about', (req, res) => {
 
 });
 
+app.get('/requisitos', (req, res) => {
+
+    res.render('requisitos', {
+        anio: new Date().getFullYear()
+    });
+
+});
+
 app.listen(port, () => {
     console.log(`Escuchando en el puerto ${ port}`);
 });
