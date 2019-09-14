@@ -38,6 +38,13 @@ app.get('/requisitos', (req, res) => {
     });
 
 });
+app.get('/cuentas', (req, res) => {
+
+    res.render('cuentas', {
+        anio: new Date().getFullYear()
+    });
+
+});
 
 app.listen(port, () => {
     console.log(`Escuchando en el puerto ${ port}`);
